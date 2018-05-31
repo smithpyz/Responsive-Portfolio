@@ -56,17 +56,25 @@ h3 {
   position: fixed;
   z-index: 99;
   width: 100%;
+  height: auto;
   margin: 0 0 30px;
-  overflow: auto;
+  overflow: hidden;
   color: #fff;
   background: #fff;
   border-bottom: 1px solid #ccc;
 }
 
+@media screen and (max-width: 660px) {
+  #masthead {
+    position: static;
+  }
+}
+
+
 #logo {
   float: left;
   width: 250px;
-  height: 45%;
+  height: auto;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 20px;
   font-weight: 500;
@@ -76,6 +84,19 @@ h3 {
   text-decoration: none;
   background: #4aaaa5;
 }
+
+@media screen and (max-width: 375px) {
+  #logo {
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    font-weight: 250;
+    font-size: auto;
+    text-align: center;
+  }
+}
+
 
 
 
@@ -119,6 +140,12 @@ footer {
   height: 50px;
 }
 
+@media screen and (max-width: 660px) {
+footer {
+    position: static;
+  }
+}
+
 h3, h2 {
   padding-bottom: 20px;
   margin-bottom: 15px;
@@ -131,6 +158,10 @@ h3, h2 {
 #main-container {
   padding-top: 90px;
   min-height: calc(100vh - 70px);
+}
+
+.img-fluid {
+  max-width: 50%;
 }
 
 .main-section {
@@ -190,12 +221,27 @@ h3, h2 {
   border-bottom: 0;
 }
 
+
+div#main-container.container.container-fluid {
+  margin-left: 35px;
+  max-height: fit-content;
+  }
+
+
 .auth-image {
   float: left;
   width: auto;
   height: auto;
   margin-top: 10px;
   margin-right: 25px;
+}
+
+@media screen and (max-width: 980px) {
+ .work {
+  max-width: 50%;
+  columns: 2;
+  display: inline;   
+  }
 }
 
 /* contact page */
