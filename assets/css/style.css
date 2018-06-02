@@ -13,9 +13,7 @@ body {
 /* general */
 
 .container {
-  width: 100%;
-  max-width: 1024px;
-  margin: 0;
+  margin: 0 30px;
   clear: both;
 }
 
@@ -50,84 +48,138 @@ h3 {
   font-size: 22px;
 }
 
+
+
 /* header */
 
 #masthead {
-  position: fixed;
   z-index: 99;
   width: 100%;
-  height: auto;
   margin: 0 0 30px;
   overflow: hidden;
   color: #fff;
   background: #fff;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 980px) {
+  #masthead {
+    position: fixed;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #masthead {
+    position: fixed;
+  } 
+}
+
+@media screen and (max-width: 640px) {
   #masthead {
     position: static;
   }
 }
 
 
+@media screen and (max-width: 980px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  } 
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 100%;
+  }
+}
+
 #logo {
-  float: left;
-  width: 250px;
-  height: auto;
   font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 3;
   color: #fff;
   text-align: center;
   text-decoration: none;
   background: #4aaaa5;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90px;
+  float: left;
+  width: 250px;
+  height: 90px
 }
 
-@media screen and (max-width: 375px) {
-  #logo {
-    display: inline-flex;
-    width: auto;
-    height: auto;
-    line-height: 1;
-    font-weight: 250;
-    font-size: auto;
-    text-align: center;
+nav {
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 980px) {
+nav {
+  float: right;
+    }   
+  }
+
+  @media screen and (max-width: 768px) {
+    nav {
+        float: left;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    nav {
+        float: left;
+    }
+  }
+
+
+  
+  @media screen and (max-width: 640px) {
+    nav a {
+      float: left;
+      width: 100%;
+    }
+  }
+
+
+nav a {
+  padding-left: 15px;
+  margin-left: 15px;
+  color: #999;
+  text-decoration: none;
+  text-align: center;
+  border-left: 1px solid #efefef;
+  float: right;
+}
+
+nav a:first-child {
+  border-left: 0 none;
+}
+
+@media screen and (max-width: 980px) {
+  nav a {
+      float: right;
   }
 }
 
+@media screen and (max-width: 768px) {
+  nav a {
+      float: right;
+  }
+} 
 
-
-
-#navbarNavy {
-  float: inline-right;
+@media screen and (max-width: 640px) {
+  nav a {
+    float: none;
+    width: 100%;
+  }
 }
-
-.navbar {
-  /* float: clear; */
-  margin-top: 1px;
-}
-
-.nav-item, .nav-item-name {
-  display: inline-block;
-  padding-left: 15px;
-  margin-left: 15px;
-  line-height: 18px;
-  color: #999;
-  text-decoration: none;
-  border-spacing: 3px;
-  border-left: 2px solid #efefef;
-  border-right: 2px solid #efefef;
-}
-
-.nav-item:first-child {
-  padding-left: 600px;
-}
-
 
 /* footer */
-
 footer {
   padding: 30px 0;
   clear: both;
@@ -140,12 +192,6 @@ footer {
   height: 50px;
 }
 
-@media screen and (max-width: 660px) {
-footer {
-    position: static;
-  }
-}
-
 h3, h2 {
   padding-bottom: 20px;
   margin-bottom: 15px;
@@ -156,35 +202,37 @@ h3, h2 {
 /* main */
 
 #main-container {
-  padding-top: 90px;
+  padding-top: 30px;
+  margin: 20px;
   min-height: calc(100vh - 70px);
 }
 
-.img-fluid {
-  max-width: 50%;
-}
-
-.main-section {
+ .main-section {
   float: left;
   width: 100%;
   max-width: 960px;
   padding: 30px;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
   background: #fff;
   border: 1px solid #ddd;
-  height: 100%;
 }
 
-.side-section {
-  float: right;
-  width: 100%;
-  max-width: 960px;
-  padding: 30px;
-  margin-bottom: 40px;
-  background: #fff;
-  border: 1px solid #ddd;
-  height: 100%;
+@media screen and (max-width: 980px) {
+  .main-section {
+    width: 68%;
+  }
 }
+ @media screen and (max-width: 768px) {
+  .main-section {
+  width: 68%;
+   }
+ }
+
+ @media screen and (max-width: 640px) {
+  .main-section {
+     width: 100%;
+   }
+ }
 
 
 /* portfolio page */
@@ -192,7 +240,7 @@ h3, h2 {
 .work {
   position: relative;
   float: left;
-  width: auto;
+  width: 274px;
   margin: 20px 0 25px;
   overflow: auto;
 }
@@ -202,7 +250,7 @@ h3, h2 {
 }
 
 .work img {
-  width: auto;
+  width: 100%;
   border: 0 none;
   opacity: 0.8;
 }
@@ -210,7 +258,7 @@ h3, h2 {
 .work h3 {
   position: absolute;
   bottom: 20px;
-  width: auto;
+  width: 100%;
   padding: 15px;
   margin-bottom: 0;
   font-weight: 300;
@@ -221,28 +269,14 @@ h3, h2 {
   border-bottom: 0;
 }
 
-
-div#main-container.container.container-fluid {
-  margin-left: 35px;
-  max-height: fit-content;
-  }
-
-
 .auth-image {
   float: left;
-  width: auto;
+  width: 200px;
   height: auto;
   margin-top: 10px;
   margin-right: 25px;
 }
 
-@media screen and (max-width: 980px) {
- .work {
-  max-width: 50%;
-  columns: 2;
-  display: inline;   
-  }
-}
 
 /* contact page */
 
